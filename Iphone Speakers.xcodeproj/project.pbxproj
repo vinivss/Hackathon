@@ -12,6 +12,8 @@
 		8416DAE01E6C5FD30044B915 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8416DADE1E6C5FD30044B915 /* Main.storyboard */; };
 		8416DAE21E6C5FD30044B915 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8416DAE11E6C5FD30044B915 /* Assets.xcassets */; };
 		8416DAE51E6C5FD30044B915 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8416DAE31E6C5FD30044B915 /* LaunchScreen.storyboard */; };
+		8416DAF01E6C60410044B915 /* speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = 8416DAEF1E6C60410044B915 /* speaker.png */; };
+		8416DAF21E6C6ACD0044B915 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8416DAF11E6C6ACD0044B915 /* AVKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,9 @@
 		8416DAE11E6C5FD30044B915 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8416DAE41E6C5FD30044B915 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8416DAE61E6C5FD30044B915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8416DAEE1E6C60030044B915 /* Iphone Speakers.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Iphone Speakers.entitlements"; sourceTree = "<group>"; };
+		8416DAEF1E6C60410044B915 /* speaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = speaker.png; path = ../../speaker.png; sourceTree = "<group>"; };
+		8416DAF11E6C6ACD0044B915 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8416DAF21E6C6ACD0044B915 /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +44,7 @@
 		8416DACE1E6C5FD30044B915 = {
 			isa = PBXGroup;
 			children = (
+				8416DAF11E6C6ACD0044B915 /* AVKit.framework */,
 				8416DAD91E6C5FD30044B915 /* Iphone Speakers */,
 				8416DAD81E6C5FD30044B915 /* Products */,
 			);
@@ -54,10 +61,12 @@
 		8416DAD91E6C5FD30044B915 /* Iphone Speakers */ = {
 			isa = PBXGroup;
 			children = (
+				8416DAEE1E6C60030044B915 /* Iphone Speakers.entitlements */,
 				8416DADA1E6C5FD30044B915 /* AppDelegate.swift */,
 				8416DADC1E6C5FD30044B915 /* ViewController.swift */,
 				8416DADE1E6C5FD30044B915 /* Main.storyboard */,
 				8416DAE11E6C5FD30044B915 /* Assets.xcassets */,
+				8416DAEF1E6C60410044B915 /* speaker.png */,
 				8416DAE31E6C5FD30044B915 /* LaunchScreen.storyboard */,
 				8416DAE61E6C5FD30044B915 /* Info.plist */,
 			);
@@ -96,6 +105,13 @@
 				TargetAttributes = {
 					8416DAD61E6C5FD30044B915 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 26PA5S496F;
+						LastSwiftMigration = 0820;
+						SystemCapabilities = {
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -123,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8416DAE51E6C5FD30044B915 /* LaunchScreen.storyboard in Resources */,
+				8416DAF01E6C60410044B915 /* speaker.png in Resources */,
 				8416DAE21E6C5FD30044B915 /* Assets.xcassets in Resources */,
 				8416DAE01E6C5FD30044B915 /* Main.storyboard in Resources */,
 			);
@@ -253,6 +270,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "sunrise.Iphone-Speakers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -264,6 +282,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "sunrise.Iphone-Speakers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -286,6 +305,7 @@
 				8416DAEB1E6C5FD30044B915 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
